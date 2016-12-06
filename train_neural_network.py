@@ -1,5 +1,8 @@
-# Create network architecture
+# Import libraries
+import tensorflow as tf
+from matplotlib import pyplot as plt
 
+# Create network architecture
 n_nodes_hl1 = 400
 n_nodes_hl2 = 200
 n_nodes_hl3 = 100
@@ -23,7 +26,6 @@ hidden_5_layer = {'weights': tf.Variable(tf.random_normal([n_nodes_hl4, n_nodes_
 output_layer = {'weights': tf.Variable(tf.random_normal([n_nodes_hl5, OUTPUT_DIMENSION])), 'bias': tf.Variable(tf.random_normal([OUTPUT_DIMENSION]))}
 
 # Define model
-
 def neural_network_model(data):
     l1 = tf.add(tf.matmul(data, hidden_1_layer['weights']), hidden_1_layer['bias'])
     l1 = tf.nn.relu(l1)
@@ -37,7 +39,8 @@ def neural_network_model(data):
     l5 = tf.nn.sigmoid(l5)
     output = tf.matmul(l5, output_layer['weights']) + output_layer['bias']
     return output
-    
+
+# Create TensorFlow pipeline
 def train_neural_network(x):
     
     prediction = neural_network_model(x)
@@ -86,5 +89,6 @@ def train_neural_network(x):
         plt.xlabel('Epoch')
         plt.ylabel('Cost')
         plt.show()
-        
+
+# Train network
 train_neural_network(x)
