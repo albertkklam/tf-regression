@@ -75,7 +75,7 @@ def train_neural_network(x):
                 epoch_loss += temp_cost
                 i += BATCH_SIZE
                 
-            print('Epoch', epoch+1, 'completed out of', n_epochs, 'loss: {:.3e}'.format(epoch_loss / 1000))
+            print('Epoch', epoch+1, 'completed out of', n_epochs, 'loss: {:.3e}'.format(epoch_loss))
         
         # SMAPE and RMSE are used here, but you can implement your own accuracy measures here
         smape = tf.reduce_mean(tf.div(tf.abs(prediction - y), tf.div(tf.abs(prediction) + tf.abs(y),2)))
