@@ -1,8 +1,10 @@
 # Import libraries
+
 import tensorflow as tf
 from matplotlib import pyplot as plt
 
 # Create network architecture
+
 n_nodes_hl1 = 400
 n_nodes_hl2 = 200
 n_nodes_hl3 = 100
@@ -13,9 +15,9 @@ n_epochs = 20
 
 INPUT_DIMENSION = x_train.shape[1]
 OUTPUT_DIMENSION = 1
-BATCH_SIZE = 10000
+BATCH_SIZE = 1000
 
-x = tf.placeholder('float')
+x = tf.placeholder('float', [None, INPUT_DIMENSION])
 y = tf.placeholder('float')
 
 hidden_1_layer = {'weights': tf.Variable(tf.random_normal([INPUT_DIMENSION, n_nodes_hl1])), 'bias': tf.Variable(tf.random_normal([n_nodes_hl1]))}
@@ -26,6 +28,7 @@ hidden_5_layer = {'weights': tf.Variable(tf.random_normal([n_nodes_hl4, n_nodes_
 output_layer = {'weights': tf.Variable(tf.random_normal([n_nodes_hl5, OUTPUT_DIMENSION])), 'bias': tf.Variable(tf.random_normal([OUTPUT_DIMENSION]))}
 
 # Define model
+
 def neural_network_model(data):
     l1 = tf.add(tf.matmul(data, hidden_1_layer['weights']), hidden_1_layer['bias'])
     l1 = tf.nn.relu(l1)
@@ -41,17 +44,22 @@ def neural_network_model(data):
     return output
 
 # Create TensorFlow pipeline
+
 def train_neural_network(x):
     
     prediction = neural_network_model(x)
     
     # Create the elastic net cost function
+    
     elastic_param1 = tf.constant(1.)
     elastic_param2 = tf.constant(1.)
     l1_cost = tf.reduce_mean(tf.abs(output_layer['weights']))
     l2_cost = tf.reduce_mean(tf.square(output_layer['weights']))
     e1_term = tf.mul(elastic_param1, l1_cost) + 1e-10
     e2_term = tf.mul(elastic_param2, l2_cost) + 1e-10
+    
+    # The basic cost function here is MSE, but you can apply your own cost as well
+    
     cost = tf.add(tf.add(tf.reduce_mean(tf.square(y - prediction)), e1_term), e2_term)
     
     optimizer = tf.train.AdamOptimizer().minimize(cost)
@@ -78,12 +86,19 @@ def train_neural_network(x):
             print('Epoch', epoch+1, 'completed out of', n_epochs, 'loss: {:.3e}'.format(epoch_loss))
         
         # SMAPE and RMSE are used here, but you can implement your own accuracy measures here
+        
         smape = tf.reduce_mean(tf.div(tf.abs(prediction - y), tf.div(tf.abs(prediction) + tf.abs(y),2)))
         rmse = tf.sqrt(tf.reduce_mean(tf.square(prediction - y)))
+        
+        # Report on the train and test SMAPE and RMSE
+        
         print('Train SMAPE: ', smape.eval({x: x_train, y: y_train}))
         print('Train RMSE: ', rmse.eval({x: x_train, y: y_train}))
+        print('Test SMAPE: ', smape.eval({x: x_test, y: y_test}))
+        print('Test RMSE: ', rmse.eval({x: x_test, y: y_test}))
 
-        # Plot cost over time
+        # Plot the cost over time
+        
         plt.plot(cost_vec, 'k-')
         plt.title('Cost per epoch')
         plt.xlabel('Epoch')
@@ -91,4 +106,5 @@ def train_neural_network(x):
         plt.show()
 
 # Train network
+
 train_neural_network(x)
