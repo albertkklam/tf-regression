@@ -1,5 +1,5 @@
 # tf-regression
-A simple implementation for regression problems using Python 2.7 and TensorFlow. Bulk of code from www.pythonprogramming.net with further enhancements including cost function tracking and elastic net regularisation from TensorFlow Machine Learning Cookbook by @nfmcclure
+A simple implementation for regression problems using Python 2.7 and TensorFlow. Bulk of code from [PythonProgramming.net](www.pythonprogramming.net) with further enhancements including cost function tracking and elastic net regularisation from [TensorFlow Machine Learning Cookbook](https://github.com/nfmcclure/tensorflow_cookbook) by @nfmcclure
 
 [train_test_data.py](train_test_data.py) is a script that preprocesses a data file into the necessary arrays for TensorFlow
 [train_neural_network.py](train_neural_network.py) contains the steps to build and evaluate a TensorFlow neural network
