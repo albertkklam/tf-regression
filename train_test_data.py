@@ -1,3 +1,10 @@
+# Import libraries here
+
+import numpy as np
+import pandas as pd
+import re
+import datetime as dt
+
 # Set up the work directory
 # Here, our complete data set is in a tab delimited file called data_v.txt
 
