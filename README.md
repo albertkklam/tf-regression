@@ -10,4 +10,4 @@ Here are some additional resources if you are looking to explore neural networks
 2. MNIST for ML Beginners by [TensorFlow.com](www.tensorflow.com)
 3. Implementing a Neural Network from Scratch by @dennybritz (available on [WildML.com](www.wildml.com))
 4. [tensorflow_tutorials](https://github.com/pkmital/tensorflow_tutorials) by @pkmital 
-5. Neural Networks, Manifolds, and Topology by @colah (availablle on his [GitHub](http://colah.github.io/))
+5. Neural Networks, Manifolds, and Topology by @colah (available on his [GitHub](http://colah.github.io/))
