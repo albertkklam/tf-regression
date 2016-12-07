@@ -1,10 +1,12 @@
 # Set up the work directory
 # Here, our complete data set is in a tab delimited file called data_v.txt
+
 data_dir = '/path/to/directory/'
 data_file = data_dir + 'data_v.txt'
 
 # Specify the data types here before parsing
 # We ensure that our response here RESPONSE is a float
+
 dtypes = {'RESPONSE': np.float}
 
 # Our file is tab delimited, so we use the tab separator here
