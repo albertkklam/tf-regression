@@ -9,9 +9,9 @@ Here are some additional resources if you are looking to explore neural networks
 
 1. Deep Learning with Neural Networks and TensorFlow series by PythonProgramming.net
 2. MNIST for ML Beginners by TensorFlow.com
-3. Implementing a Neural Network from Scratch by @dennybritz (available on WildML.com)
+3. Calculus on Computational Graphs: Backpropagation by @colah (available on his [GitHub](http://colah.github.io/)) 
 4. [tensorflow_tutorials](https://github.com/pkmital/tensorflow_tutorials) by @pkmital 
 5. Neural Networks, Manifolds, and Topology by @colah (available on his [GitHub](http://colah.github.io/))
-6. Calculus on Computational Graphs: Backpropagation by @colah (available on his [GitHub](http://colah.github.io/)) 
+6. Implementing a Neural Network from Scratch by @dennybritz (available on WildML.com)
 7. Efficient Backprop by LeCun et al., 1998 
 8. Practical Recommendations for Gradient-Based Training of Deep Architectures by Bengio, 2012
