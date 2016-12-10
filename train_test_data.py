@@ -23,21 +23,28 @@ dtypes = {'RESPONSE': np.float}
 
 rawdata = pd.read_csv(data_file, sep = "\t", dtype = dtypes, parse_dates = ['WEEK'], date_parser = pd.to_datetime)
 
+# Let's remove some of the outliers in data
+
+def removeOutliers (df):
+    return df[(df['RESPONSE'] > 0.2) & (df['RESPONSE'] < 100.0)]
+
+rawdata = removeOutliers(rawdata)
+
 # Define a simple function to remove spaces and other punctuation
 # We will eventually make our categorical variables into dummy variables
 # Our categorical values will form the basis for our dummy variable column names
 
-def df_strreplace(df):
+def replaceValues(df):
     df.replace(r'[\s]','_', inplace = True, regex = True)
     df.replace(r'[\.]','', inplace = True, regex = True)
     df.replace(r'__','_', inplace = True, regex = True)
 
-df_strreplace(rawdata)
+replaceValues(rawdata)
 
 # Define a simple function to create dummy variables for our categorical variables cat_var_list
 # We append the categorical value to the end of the categorical column name for each dummy
 
-def df_cat(df, cat_var_list):
+def categoricalCols(df, cat_var_list):
     for cv in cat_var_list:
         if [i for i, x in enumerate(cat_var_list) if cv == x][0] == 0:
             dummy_df = pd.get_dummies(df[cv], prefix = cv)
@@ -62,7 +69,7 @@ num_cols.append('WEEK')
 # Apply df_cat to our categorical columns here
 
 num_rawdata = rawdata[num_cols]
-cat_rawdata = df_cat(rawdata[cat_cols], cat_cols)
+cat_rawdata = categoricalCols(rawdata[cat_cols], cat_cols)
 pred_rawdata = rawdata[pred_cols]
 
 # Stack our categorical and numeric data sets together
