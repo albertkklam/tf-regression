@@ -8,7 +8,7 @@ A simple implementation for regression problems using Python 2.7 and TensorFlow
 Here are some additional resources if you are looking to explore neural networks and TensorFlow more extensively:
 
 1. Deep Learning with Neural Networks and TensorFlow series by PythonProgramming.net
-2. MNIST for ML Beginners by TensorFlow.com
+2. MNIST for ML Beginners by TensorFlow.org
 3. Calculus on Computational Graphs: Backpropagation by @colah (available on his [GitHub](http://colah.github.io/)) 
 4. [tensorflow_tutorials](https://github.com/pkmital/tensorflow_tutorials) by @pkmital 
 5. Neural Networks, Manifolds, and Topology by @colah (available on his [GitHub](http://colah.github.io/))
