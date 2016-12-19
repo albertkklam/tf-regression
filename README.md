@@ -3,7 +3,7 @@ A simple implementation for regression problems using Python 2.7 and TensorFlow
 
 * [train_test_data.py](train_test_data.py) is a script that preprocesses a data file into the necessary train and test set arrays for TensorFlow. It includes functions to convert categorical variables into dummies, convert string values into Python compatible strings, and remove outliers
 
-* [train_neural_network.py](train_neural_network.py) contains the steps to build and evaluate a TensorFlow neural network. Bulk of code from PythonProgramming.net with further enhancements including cost function tracking and elastic net regularisation from [TensorFlow Machine Learning Cookbook](https://github.com/nfmcclure/tensorflow_cookbook) by @nfmcclure
+* [train_neural_network.py](train_neural_network.py) contains the steps to build and evaluate a TensorFlow neural network. Bulk of code from PythonProgramming.net with further enhancements including cost function tracking, leaky ReLU implementation, and elastic net regularisation (from [TensorFlow Machine Learning Cookbook](https://github.com/nfmcclure/tensorflow_cookbook) by @nfmcclure)
 
 Here are some additional resources if you are looking to explore neural networks and TensorFlow more extensively:
 
