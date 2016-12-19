@@ -28,7 +28,7 @@ hidden_5_layer = {'weights': tf.Variable(tf.random_normal([n_nodes_hl4, n_nodes_
 output_layer = {'weights': tf.Variable(tf.random_normal([n_nodes_hl5, OUTPUT_DIMENSION])), 'bias': tf.Variable(tf.random_normal([OUTPUT_DIMENSION]))}
 
 
-# Define the Leaky ReLu function
+# Define the Leaky ReLU function
 
 def leakyRelu(x, alpha=0., max_value=None):
     return tf.maximum(alpha*x,x)
