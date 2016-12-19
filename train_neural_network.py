@@ -30,7 +30,7 @@ output_layer = {'weights': tf.Variable(tf.random_normal([n_nodes_hl5, OUTPUT_DIM
 
 # Define the Leaky ReLU function
 
-def leakyRelu(x, alpha=0., max_value=None):
+def leakyRelu(x, alpha=0.):
     return tf.maximum(alpha*x,x)
 
 # Define model and set the alpha to be 0.1
