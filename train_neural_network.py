@@ -27,17 +27,23 @@ hidden_4_layer = {'weights': tf.Variable(tf.random_normal([n_nodes_hl3, n_nodes_
 hidden_5_layer = {'weights': tf.Variable(tf.random_normal([n_nodes_hl4, n_nodes_hl5])), 'bias': tf.Variable(tf.random_normal([n_nodes_hl5]))}
 output_layer = {'weights': tf.Variable(tf.random_normal([n_nodes_hl5, OUTPUT_DIMENSION])), 'bias': tf.Variable(tf.random_normal([OUTPUT_DIMENSION]))}
 
-# Define model
+
+# Define the Leaky ReLu function
+
+def leakyRelu(x, alpha=0., max_value=None):
+    return tf.maximum(alpha*x,x)
+
+# Define model and set the alpha to be 0.1
 
 def neural_network_model(data):
     l1 = tf.add(tf.matmul(data, hidden_1_layer['weights']), hidden_1_layer['bias'])
-    l1 = tf.nn.relu(l1)
+    l1 = leakyRelu(l1, alpha = 0.1)
     l2 = tf.add(tf.matmul(l1, hidden_2_layer['weights']), hidden_2_layer['bias'])
-    l2 = tf.nn.relu(l2)
+    l2 = leakyRelu(l2, alpha = 0.1)
     l3 = tf.add(tf.matmul(l2, hidden_3_layer['weights']), hidden_3_layer['bias'])
-    l3 = tf.nn.relu(l3)
+    l3 = leakyRelu(l3, alpha = 0.1)
     l4 = tf.add(tf.matmul(l3, hidden_4_layer['weights']), hidden_4_layer['bias'])
-    l4 = tf.nn.relu(l4)
+    l4 = leakyRelu(l4, alpha = 0.1)
     l5 = tf.add(tf.matmul(l4, hidden_5_layer['weights']), hidden_5_layer['bias'])
     l5 = tf.nn.sigmoid(l5)
     output = tf.matmul(l5, output_layer['weights']) + output_layer['bias']
