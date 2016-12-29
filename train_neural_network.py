@@ -17,8 +17,8 @@ INPUT_DIMENSION = x_train.shape[1]
 OUTPUT_DIMENSION = 1
 BATCH_SIZE = 1000
 
-x = tf.placeholder('float', [None, INPUT_DIMENSION])
-y = tf.placeholder('float')
+x = tf.placeholder(tf.float32, shape = (None, INPUT_DIMENSION))
+y = tf.placeholder(tf.float32)
 
 hidden_1_layer = {'weights': tf.Variable(tf.random_normal([INPUT_DIMENSION, n_nodes_hl1])), 'bias': tf.Variable(tf.random_normal([n_nodes_hl1]))}
 hidden_2_layer = {'weights': tf.Variable(tf.random_normal([n_nodes_hl1, n_nodes_hl2])), 'bias': tf.Variable(tf.random_normal([n_nodes_hl2]))}
