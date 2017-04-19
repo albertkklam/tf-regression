@@ -15,7 +15,7 @@ Here are some additional resources if you are looking to explore neural networks
 3. [Calculus on Computational Graphs: Backpropagation by @colah](http://colah.github.io/posts/2015-08-Backprop/) 
 4. [TensorFlow_Tutorials by @pkmital](https://github.com/pkmital/tensorflow_tutorials) 
 5. [Neural Networks, Manifolds, and Topology by @colah](http://colah.github.io/posts/2014-03-NN-Manifolds-Topology/)
-6. [Implementing a Neural Network from Scratch by @dennybritz] (http://www.wildml.com/2015/09/implementing-a-neural-network-from-scratch/)
+6. [Implementing a Neural Network from Scratch by @dennybritz](http://www.wildml.com/2015/09/implementing-a-neural-network-from-scratch/)
 7. [Efficient Backprop by LeCun et al., 1998](http://yann.lecun.com/exdb/publis/pdf/lecun-98b.pdf) 
 8. [Practical Recommendations for Gradient-Based Training of Deep Architectures by Bengio, 2012](https://arxiv.org/abs/1206.5533)
 
