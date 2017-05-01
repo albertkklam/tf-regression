@@ -18,10 +18,8 @@ dtypes = {'RESPONSE': np.float}
 
 # Our file is tab delimited, so we use the tab separator here
 # We also have a date column called WEEK in DD-MM-YYYY format, so we need to parse this in as a date format
-# to_datetime is a clever pandas function that can detect the date format
-# You may need to do some fiddling with the parameters of to_datetime if it initially fails to detect the date format
 
-rawdata = pd.read_csv(data_file, sep = "\t", dtype = dtypes, parse_dates = ['WEEK'], date_parser = pd.to_datetime)
+rawdata = pd.read_csv(data_file, sep = "\t", dtype = dtypes, parse_dates = ['WEEK'], infer_datetime_format = True)
 
 # Let's remove some of the outliers in data
 
