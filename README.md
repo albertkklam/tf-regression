@@ -9,7 +9,7 @@ A simple implementation for regression problems using Python 2.7 and TensorFlow
 ## Resources
 Here are some additional resources if you are looking to explore neural networks and TensorFlow more extensively:
 
-### Tensorflow and Neural Networks
+### TensorFlow and Neural Networks
 1. [Deep Learning with Neural Networks and TensorFlow series by PythonProgramming.net](https://pythonprogramming.net/neural-networks-machine-learning-tutorial/)
 2. [MNIST for ML Beginners by TensorFlow.org](https://www.tensorflow.org/get_started/mnist/beginners)
 3. [Calculus on Computational Graphs: Backpropagation by @colah](http://colah.github.io/posts/2015-08-Backprop/) 
@@ -20,4 +20,4 @@ Here are some additional resources if you are looking to explore neural networks
 8. [Practical Recommendations for Gradient-Based Training of Deep Architectures by Bengio, 2012](https://arxiv.org/abs/1206.5533)
 
 ### TensorBoard
-1. [Simple Introduction to Tensorboard Embedding Visualisation](http://www.pinchofintelligence.com/simple-introduction-to-tensorboard-embedding-visualisation/)
+1. [Simple Introduction to TensorBoard Embedding Visualisation](http://www.pinchofintelligence.com/simple-introduction-to-tensorboard-embedding-visualisation/)
