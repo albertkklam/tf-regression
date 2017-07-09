@@ -9,15 +9,18 @@ A simple implementation for regression problems using Python 2.7 and TensorFlow
 ## Resources
 Here are some additional resources if you are looking to explore neural networks and TensorFlow more extensively:
 
-### TensorFlow and Neural Networks
+### TensorFlow
 1. [Deep Learning with Neural Networks and TensorFlow series by PythonProgramming.net](https://pythonprogramming.net/neural-networks-machine-learning-tutorial/)
 2. [MNIST for ML Beginners by TensorFlow.org](https://www.tensorflow.org/get_started/mnist/beginners)
-3. [Calculus on Computational Graphs: Backpropagation by @colah](http://colah.github.io/posts/2015-08-Backprop/) 
-4. [TensorFlow Tutorials by @pkmital](https://github.com/pkmital/tensorflow_tutorials) 
-5. [Neural Networks, Manifolds, and Topology by @colah](http://colah.github.io/posts/2014-03-NN-Manifolds-Topology/)
-6. [Implementing a Neural Network from Scratch by @dennybritz](http://www.wildml.com/2015/09/implementing-a-neural-network-from-scratch/)
-7. [Efficient Backprop by LeCun et al., 1998](http://yann.lecun.com/exdb/publis/pdf/lecun-98b.pdf) 
-8. [Practical Recommendations for Gradient-Based Training of Deep Architectures by Bengio, 2012](https://arxiv.org/abs/1206.5533)
+3. [TensorFlow Tutorials by @pkmital](https://github.com/pkmital/tensorflow_tutorials) 
+
+### Neural Networks
+1. [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/index.html)
+2. [Calculus on Computational Graphs: Backpropagation by @colah](http://colah.github.io/posts/2015-08-Backprop/)
+3. [Neural Networks, Manifolds, and Topology by @colah](http://colah.github.io/posts/2014-03-NN-Manifolds-Topology/)
+4. [Implementing a Neural Network from Scratch by @dennybritz](http://www.wildml.com/2015/09/implementing-a-neural-network-from-scratch/)
+5. [Efficient Backprop by LeCun et al., 1998](http://yann.lecun.com/exdb/publis/pdf/lecun-98b.pdf) 
+6. [Practical Recommendations for Gradient-Based Training of Deep Architectures by Bengio, 2012](https://arxiv.org/abs/1206.5533)
 
 ### TensorBoard
 1. [Simple Introduction to TensorBoard Embedding Visualisation](http://www.pinchofintelligence.com/simple-introduction-to-tensorboard-embedding-visualisation/)
