@@ -14,6 +14,9 @@ Here are some additional resources if you are looking to explore neural networks
 2. [MNIST for ML Beginners by TensorFlow.org](https://www.tensorflow.org/get_started/mnist/beginners)
 3. [TensorFlow Tutorials by @pkmital](https://github.com/pkmital/tensorflow_tutorials) 
 
+### Keras
+1. [fast.ai Deep Learning](http://www.fast.ai/)
+
 ### Neural Networks
 1. [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/index.html)
 2. [Calculus on Computational Graphs: Backpropagation by @colah](http://colah.github.io/posts/2015-08-Backprop/)
